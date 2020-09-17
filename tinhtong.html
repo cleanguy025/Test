@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="firstNum" onkeyup="calculated()" placeholder="so thu 1">
+    <input type="text" id="secondNum" onkeyup="calculated()" placeholder="so thu 2"> <br>
+    Tong 2 so la: <p class="sum"></p>
+    <script>
+        function calculated(){
+            var stNum = document.getElementById('firstNum');
+            var ndNum = document.querySelector('#secondNum');
+            var result = document.getElementsByClassName('sum');
+            if (!isNaN(parseInt(stNum.value) + parseInt(ndNum.value))){
+                result[0].innerHTML = parseInt(stNum.value) + parseInt(ndNum.value);
+            }
+            // NaN - Not A Number
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        ID: <input type="text" id="idText"> <br>
+        Password: <input type="password" id="pass"> <br>
+        Re-password: <input type="password" id="repass"> <br>
+        <button id="btn" >Register</button>
+        <p id="noti"></p>
+    </form>
+
+    <script>
+        var inputID = document.getElementById("idText");
+        var inputPass = document.getElementById("pass");
+        var inputRePass = document.getElementById("repass");
+        var btn = document.getElementById("btn");
+        btn.onclick = function(){
+            if (inputID.value == "" || inputPass.value == "") {
+                document.getElementById("noti").textContent = "khong duoc de trong id hoac password";
+                document.getElementById("noti").style = "background: pink;";
+                return false;
+            }
+            else if (inputPass.value != inputRePass.value) {
+                alert('mat khau nhap lai chua trung khop');
+                return false;
+            }
+            else{
+                alert('dang ky thanh cong');
+                return true;
+            }
+        }
+        // btn.addEventListener('mouseover', function(){
+        //     if (inputID.value == "" || inputPass.value == "") {
+        //         document.getElementById("noti").textContent = "khong duoc de trong id hoac password";
+        //         document.getElementById("noti").style = "background: pink;";
+        //         return false;
+        //     }
+        //     else if (inputPass.value != inputRePass.value) {
+        //         alert('mat khau nhap lai chua trung khop');
+        //         return false;
+        //     }
+        //     else{
+        //         alert('dang ky thanh cong');
+        //         return true;
+        //     }
+        // });
+    </script>
+</body>
+</html>

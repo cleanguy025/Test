@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="message" value="" onkeyup="show_result()">
+    <div class="result"></div>
+    <script language= "javascript">
+        function show_result(){
+            // var input = document.getElementById("message");
+            // var div = document.getElementsByClassName("result");
+            // div[0].innerHTML = input.value;
+            // console.log(div.innerHTML);
+            // console.log(input.value);
+            var input = document.querySelectorAll("#message");
+            var div = document.querySelectorAll(".result");
+            div[0].innerHTML = input[0].value;
+
+            //-------------------------------------------
+            // Sự khác nhau giữa querySelector và querySelectorAll là: querySelector thì trả về a SINGLE OBJECT
+            // với phần tử HTML đầu tiên trùng với 'selectors'
+            // nhưng querySelectorAll thì trả về 1 mảng objects với tất cả các thẻ HTML trùng với 'selectors'
+
+            //---------------------------
+            // Tương tự thì getElementById sẽ trả về single objects như querySelector
+            // còn getElementsByClassName hay getElementsByTagName thì sẽ trả về 1 mảng các objects giống như querySelectorAll
+        }
+    </script>
+</body>
+</html>
